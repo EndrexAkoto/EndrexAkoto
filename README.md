@@ -82,6 +82,8 @@ shilling, and outreach systems that respect sending limits.
 
 ## 🇺🇸 Apps and platforms for the US events industry
 
+![The Hook Club site, the Assistie planner app and the Intensity AI musician app](assets/banner-us.png)
+
 - 🤝 **[Assistie](https://assistie.com/)**: event staff, booked in minutes. Planners
   list the help they need for a wedding, gala or conference; assistants show
   their skills, rates and availability and accept with one tap. Web app at
