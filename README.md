@@ -161,5 +161,7 @@ Older projects, experiments and course work.
 - 🌐 [akotogrouplimited.com](https://akotogrouplimited.com/)
 - ✉️ hello@akotogrouplimited.com
 
-[![GitHub followers](https://img.shields.io/github/followers/EndrexAkoto?style=for-the-badge&logo=github&label=Followers)](https://github.com/EndrexAkoto?tab=followers)
-[![GitHub stars](https://img.shields.io/github/stars/EndrexAkoto?style=for-the-badge&logo=github&label=Stars)](https://github.com/EndrexAkoto?tab=repositories)
+<p>
+<img src="assets/stats.svg" alt="GitHub activity: 115 repositories, 4,307 commits in the last year, 210 pull requests, 92 stars, 58 followers" width="420">
+<img src="assets/langs.svg" alt="Languages: Python 63%, TypeScript 25%, HTML 6%, JavaScript 3%, CSS 2%, C 1%" width="420">
+</p>
