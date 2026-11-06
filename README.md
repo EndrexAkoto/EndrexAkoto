@@ -16,7 +16,8 @@ and stores that sit in front of them.
 |---|---|
 | 🏫 | **Akoto Shule** in schools: fees, M-Pesa, CBC reports and payroll in one system |
 | 🧾 | **AkotoPOS** live for shops and small businesses, with M-Pesa built in |
-| 🌍 | **Nine client sites live**, from a training institute to an AgriTech marketplace |
+| 🌍 | **Nine Kenyan client sites live**, from a training institute to an AgriTech marketplace |
+| 🇺🇸 | **US events industry**: Assistie, Intensity AI and The Hook Club, web and iOS |
 | 📱 | The Akoto staff portal shipped to **Google Play** as a progressive web app |
 | 🤖 | **Claude-powered assistants** inside the products, with the key kept server-side |
 | 💳 | **M-Pesa, Paystack and multi-currency** payments handled end to end, with signed e-contracts and audit trails |
@@ -62,16 +63,31 @@ shilling, and outreach systems that respect sending limits.
 
 ## 🚀 Products
 
+- 🏢 **[Akoto Group](https://akotogrouplimited.com/)**: the company site with a
+  Claude-powered assistant, and behind it the staff portal: CRM, invoicing,
+  e-signing, payroll, multi-currency finance and outreach, installed on phones
+  as a PWA and on Google Play.
 - 🏫 **[Akoto Shule](https://akotoshule.link/)**: school management for Kenyan
   schools, from fees and M-Pesa payments to CBC reporting and payroll.
 - 🧾 **[AkotoPOS](https://akotopos.co.ke/)**: point of sale and stock control for
   shops and small businesses, with M-Pesa built in.
 - 🎓 **[Akoto Learn](https://akotolearn.co.ke/)**: coding, robotics and AI courses
   for Kenyan learners, with a short-course school behind it.
-- 🏢 **[Akoto Group](https://akotogrouplimited.com/)**: the company site with a
-  Claude-powered assistant, and behind it the staff portal: CRM, invoicing,
-  e-signing, payroll, multi-currency finance and outreach, installed on phones
-  as a PWA and on Google Play.
+
+## 🇺🇸 Apps and platforms for the US events industry
+
+- 🤝 **[Assistie](https://assistie.com/)**: event staff, booked in minutes. Planners
+  list the help they need for a wedding, gala or conference; assistants show
+  their skills, rates and availability and accept with one tap. Web app at
+  [app.assistie.com](https://app.assistie.com/) plus an iOS app, with messaging,
+  reminders and reviews.
+- 🎸 **[Intensity AI](https://www.in10cityband.com/)**: the operations platform and
+  mobile app for a live entertainment company: gig invites answered in a tap,
+  run of show, rosters, set lists with each musician's parts, venue and load-in
+  details, blackout dates and pay history, all fed from the office's booking,
+  staffing and song-library system.
+- 🎤 **[The Hook Club](https://thehookclub.nyc/)**: official site for a New York live
+  entertainment collective of wedding bands, DJ ensembles and live performers.
 
 ## 🌐 Client work that is live
 
