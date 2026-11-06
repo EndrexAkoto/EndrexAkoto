@@ -1,71 +1,46 @@
-# Hi, I'm Endrex Akoto
+# Hi, I'm Endrex Akoto 👋
 
-Full-stack software engineer in Nairobi, Kenya, and founder of
+[![Akoto Group Limited](https://img.shields.io/badge/Founder-Akoto_Group_Limited-0b5fff?style=for-the-badge&logo=rocket&logoColor=white)](https://akotogrouplimited.com/)
+[![Nairobi](https://img.shields.io/badge/Nairobi-Kenya-d95926?style=for-the-badge&logo=googlemaps&logoColor=white)](https://akotogrouplimited.com/contact)
+[![Email](https://img.shields.io/badge/Email-hello%40akotogrouplimited.com-3987e5?style=for-the-badge&logo=gmail&logoColor=white)](mailto:hello@akotogrouplimited.com)
+
+Full-stack software engineer and founder of
 [Akoto Group Limited](https://akotogrouplimited.com/). I build software that
 small and mid-sized organisations in Kenya actually run on: school management,
-point of sale, payroll, invoicing, e-commerce and the websites that sit in
-front of them.
+point of sale, payroll, ERP, IoT installations, AI assistants and the websites
+and stores that sit in front of them.
 
-## Products
+## 🏆 Highlights
 
-- **[Akoto Shule](https://akotoshule.link/)**: school management for Kenyan
-  schools, from fees and M-Pesa payments to CBC reporting and payroll.
-- **[AkotoPOS](https://akotopos.co.ke/)**: point of sale and stock control for
-  shops and small businesses, with M-Pesa built in.
-- **Akoto Learn**: coding, robotics and AI courses for Kenyan learners, with a
-  short-course school behind it.
-- **Akoto Group portal**: the company's own CRM, invoicing, e-signing, payroll,
-  multi-currency finance and outreach system, with a Claude-powered assistant
-  on the public site.
-
-## Client work that is live
-
-| Site | What it is |
+| | |
 |---|---|
-| [Kite Institute of Professional Studies](https://kiteinstituteofprofessionalstudies.com/) | Academic platform for a KASNEB, IT and business training institute, with online applications |
-| [Mich Digi Solutions](https://michdigisolutions.com/) | Online store for a computer and electronics retailer |
-| [KingBi Tech Solutions](https://www.kingbitechsolutions.com/) | Gadgets marketplace with smart pricing |
-| [Mkenya2RU Creatives](https://mkenya2ru.com/) | Branding and merchandise storefront with WhatsApp ordering |
-| [Agriland Connect](https://agrilandconnect.com/) | AgriTech marketplace linking smallholder farmers with suppliers and buyers |
-| [We Drop Technologies](https://wedroptech.com/) | ICT solutions company: laptops, refurbished machines and repairs |
-| [Breathehaus](https://breathehaus.com/) | Browser-based conversation game |
-| St. Monica Girls' Senior School, Kitale | School website and Django REST API |
-| Nexa Research | Research consultancy website |
+| 🏫 | **Akoto Shule** in schools: fees, M-Pesa, CBC reports and payroll in one system |
+| 🧾 | **AkotoPOS** live for shops and small businesses, with M-Pesa built in |
+| 🌍 | **Nine client sites live**, from a training institute to an AgriTech marketplace |
+| 📱 | The Akoto staff portal shipped to **Google Play** as a progressive web app |
+| 🤖 | **Claude-powered assistants** inside the products, with the key kept server-side |
+| 💳 | **M-Pesa, Paystack and multi-currency** payments handled end to end, with signed e-contracts and audit trails |
+| 📡 | **IoT** for fish farms, greenhouses and BnB door access |
 
-## Other systems I have built
+## 🛠️ Stack
 
-These are private client or internal repositories, so there is nothing to
-link, but they are the bulk of the work:
-
-- **ERP, HRM and payroll**: custom builds for companies with large payrolls
-  and stock, with Kenyan statutory deductions (PAYE, NSSF, SHIF, Housing
-  Levy) done per person.
-- **Management systems**: hospital, chama (savings group), rental, hotel and
-  BnB, loan, tourism and ISP data retail.
-- **IoT**: sensor and control systems for fish farming, greenhouses, and
-  BnB door access and room sensors, with dashboards and alerts on top.
-- **AI for companies**: training and building models on a company's own
-  data, and assistants wired into the systems staff already use.
-- **Finance**: invoicing, a wallet with QR payments, and an investor portal
-  (Mwekezaji).
-- **E-commerce**: auto parts (Deutsche Point), beauty and lifestyle stores.
-- **Marketing and content**: social media marketing automation, a growth
-  engine, a document generator (Doc Forge).
-- **Health**: AfyaLink and a telemedicine front end.
-- **Data**: sentiment analysis in Python notebooks.
-
-## Services
-
-Beyond the products, Akoto Group takes on general technology work for
-companies: custom software, ERP and HRM implementation, IoT installations,
-AI model training and integration, hosting and infrastructure, digital
-marketing, and staff training so teams can run what we hand over. If it is a
-technology problem a Kenyan business has, we will usually take it on.
-
-The public repositories below are older projects, experiments and course
-work.
-
-## How I work
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white)
+![Django](https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
+![Tailwind](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
+![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white)
+![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=flat-square&logo=mariadb&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=flat-square&logo=cloudflare&logoColor=white)
+![Claude](https://img.shields.io/badge/Claude-Anthropic-D97757?style=flat-square&logo=anthropic&logoColor=white)
+![Arduino](https://img.shields.io/badge/Arduino-00979D?style=flat-square&logo=arduino&logoColor=white)
+![Raspberry Pi](https://img.shields.io/badge/Raspberry_Pi-A22846?style=flat-square&logo=raspberrypi&logoColor=white)
+![M-Pesa](https://img.shields.io/badge/M--Pesa-Daraja_API-4CAF50?style=flat-square)
+![Paystack](https://img.shields.io/badge/Paystack-00C3F7?style=flat-square&logo=paystack&logoColor=white)
 
 - **Backend**: Python with Flask and Django, SQLAlchemy, MariaDB and Postgres,
   REST APIs, cron-driven background jobs.
@@ -74,6 +49,8 @@ work.
 - **Mobile**: Flutter and Dart.
 - **AI**: Claude-powered assistants inside the products I ship, with the
   provider key kept server-side and the model chosen by capability tier.
+- **IoT**: sensors, controllers and gateways reporting into web dashboards
+  with alerts.
 - **Payments and integrations**: M-Pesa (STK push, C2B callbacks), Paystack,
   Meta Graph API, Web Push.
 - **Operations**: cPanel and LiteSpeed hosting, Cloudflare Pages, Docker for
@@ -83,7 +60,66 @@ I care about the unglamorous parts: idempotent payment callbacks, audit
 trails on signed documents, statutory deductions that are right to the
 shilling, and outreach systems that respect sending limits.
 
-## Public projects
+## 🚀 Products
+
+- 🏫 **[Akoto Shule](https://akotoshule.link/)**: school management for Kenyan
+  schools, from fees and M-Pesa payments to CBC reporting and payroll.
+- 🧾 **[AkotoPOS](https://akotopos.co.ke/)**: point of sale and stock control for
+  shops and small businesses, with M-Pesa built in.
+- 🎓 **[Akoto Learn](https://akotolearn.co.ke/)**: coding, robotics and AI courses
+  for Kenyan learners, with a short-course school behind it.
+- 🏢 **[Akoto Group](https://akotogrouplimited.com/)**: the company site with a
+  Claude-powered assistant, and behind it the staff portal: CRM, invoicing,
+  e-signing, payroll, multi-currency finance and outreach, installed on phones
+  as a PWA and on Google Play.
+
+## 🌐 Client work that is live
+
+| Site | What it does |
+|---|---|
+| 🎓 [Kite Institute of Professional Studies](https://kiteinstituteofprofessionalstudies.com/) | Academic platform for a KASNEB, IT and business training institute, with online applications |
+| 🏫 [St. Monica's Girls' Senior School, Kitale](https://stmonicasgirlskitale.sc.ke/) | School website with admissions, a fee structure published by year, news and downloads, kept current by school staff through their own admin |
+| 🔎 [Nexa Research](https://nexagroupke.com/) | Site for a Nairobi research and public-data intelligence firm: services, research write-ups and insights, with enquiries landing in the firm's own inbox |
+| 💻 [Mich Digi Solutions](https://michdigisolutions.com/) | Online store for a computer and electronics retailer, with WhatsApp and call enquiry |
+| 📱 [KingBi Tech Solutions](https://www.kingbitechsolutions.com/) | Gadgets marketplace with smart pricing |
+| 🎨 [Mkenya2RU Creatives](https://mkenya2ru.com/) | Branding and merchandise storefront with WhatsApp ordering |
+| 🌱 [Agriland Connect](https://agrilandconnect.com/) | AgriTech marketplace linking smallholder farmers with suppliers and buyers |
+| 🔧 [We Drop Technologies](https://wedroptech.com/) | ICT solutions company: laptops, refurbished machines and repairs |
+| 🎲 [Breathehaus](https://breathehaus.com/) | Browser-based conversation game for dates, friends and team nights |
+
+## 🔒 Other systems I have built
+
+These are private client or internal repositories, so there is nothing to
+link, but they are the bulk of the work:
+
+- 🏭 **ERP, HRM and payroll**: custom builds for companies with large payrolls
+  and stock, with Kenyan statutory deductions (PAYE, NSSF, SHIF, Housing
+  Levy) done per person.
+- 🗂️ **Management systems**: hospital, chama (savings group), rental, hotel and
+  BnB, loan, tourism and ISP data retail.
+- 📡 **IoT**: sensor and control systems for fish farming, greenhouses, and
+  BnB door access and room sensors, with dashboards and alerts on top.
+- 🧠 **AI for companies**: training and building models on a company's own
+  data, and assistants wired into the systems staff already use.
+- 💰 **Finance**: invoicing, a wallet with QR payments, and an investor portal
+  (Mwekezaji).
+- 🛒 **E-commerce**: auto parts (Deutsche Point), beauty and lifestyle stores.
+- 📣 **Marketing and content**: social media marketing automation, a growth
+  engine, a document generator (Doc Forge).
+- 🩺 **Health**: AfyaLink and a telemedicine front end.
+- 📊 **Data**: sentiment analysis in Python notebooks.
+
+## 🤝 Services
+
+Beyond the products, Akoto Group takes on general technology work for
+companies: custom software, ERP and HRM implementation, IoT installations,
+AI model training and integration, hosting and infrastructure, digital
+marketing, and staff training so teams can run what we hand over. If it is a
+technology problem a Kenyan business has, we will usually take it on.
+
+## 📂 Public projects
+
+Older projects, experiments and course work.
 
 | Project | Stack | What it is |
 |---|---|---|
@@ -96,10 +132,10 @@ shilling, and outreach systems that respect sending limits.
 | [Wardrobe-Management-System](https://github.com/EndrexAkoto/Wardrobe-Management-System) | Laravel | Wardrobe inventory manager |
 | [-SUI_BootCamp_Calculator](https://github.com/EndrexAkoto/-SUI_BootCamp_Calculator) | Move | Sui bootcamp exercise |
 
-## Contact
+## 📬 Contact
 
-- Company: [akotogrouplimited.com](https://akotogrouplimited.com/)
-- Email: hello@akotogrouplimited.com
+- 🌐 [akotogrouplimited.com](https://akotogrouplimited.com/)
+- ✉️ hello@akotogrouplimited.com
 
 ![GitHub stats](https://github-readme-stats.vercel.app/api?username=EndrexAkoto&show_icons=true&hide_border=true)
 ![Top languages](https://github-readme-stats.vercel.app/api/top-langs/?username=EndrexAkoto&layout=compact&hide_border=true)
