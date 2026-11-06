@@ -161,7 +161,7 @@ Older projects, experiments and course work.
 - 🌐 [akotogrouplimited.com](https://akotogrouplimited.com/)
 - ✉️ hello@akotogrouplimited.com
 
-<p>
-<img src="assets/stats.svg" alt="GitHub activity: 115 repositories, 4,307 commits in the last year, 210 pull requests, 92 stars, 58 followers" width="420">
-<img src="assets/langs.svg" alt="Languages: Python 63%, TypeScript 25%, HTML 6%, JavaScript 3%, CSS 2%, C 1%" width="420">
-</p>
+<table><tr>
+<td><img src="assets/langs.svg" alt="Languages: Python 71%, TypeScript 19%, HTML 4%, JavaScript 3%, CSS 1%, C 1%; also Swift, Dart (Flutter), Kotlin, C++, SQL, Shell, Jupyter, Move, Rust" width="420"></td>
+<td><img src="assets/stats.svg" alt="GitHub activity: 6,642 commits since 2023, 4,308 in the last year, 210 pull requests, 115 repositories owned, 13 others contributed to, 106 stars, 58 followers" width="420"></td>
+</tr></table>

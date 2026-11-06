@@ -14,26 +14,51 @@ from datetime import date
 from pathlib import Path
 
 LOGIN = "EndrexAkoto"
-QUERY = """
-{ user(login:"EndrexAkoto"){
-    followers{totalCount}
-    repositories(ownerAffiliations:OWNER, first:100){ totalCount
-      nodes{ isFork stargazerCount
-        languages(first:10, orderBy:{field:SIZE,direction:DESC}){ edges{ size node{ name color } } } } }
-    contributionsCollection{ totalCommitContributions restrictedContributionsCount
-      totalPullRequestContributions totalIssueContributions totalRepositoriesWithContributedCommits
-      contributionCalendar{ totalContributions } } } }
+LANGS = "languages(first:20, orderBy:{field:SIZE,direction:DESC}){ edges{ size node{ name color } } }"
+QUERY_USER = f"""
+{{ user(login:"{LOGIN}"){{ createdAt followers{{totalCount}}
+    contributionsCollection{{ totalCommitContributions restrictedContributionsCount
+      totalPullRequestContributions totalRepositoriesWithContributedCommits }} }} }}
 """
+QUERY_OWNED = f"""query($endCursor:String){{ user(login:"{LOGIN}"){{
+    repositories(ownerAffiliations:OWNER, first:100, after:$endCursor){{ totalCount
+      pageInfo{{hasNextPage endCursor}} nodes{{ isFork stargazerCount {LANGS} }} }} }} }}"""
+QUERY_CONTRIB = f"""query($endCursor:String){{ user(login:"{LOGIN}"){{
+    repositoriesContributedTo(first:100, after:$endCursor, includeUserRepositories:false,
+      contributionTypes:[COMMIT,PULL_REQUEST]){{ pageInfo{{hasNextPage endCursor}} nodes{{ isFork {LANGS} }} }} }} }}"""
+QUERY_YEAR = """{{ user(login:"%s"){{ contributionsCollection(from:"{y}-01-01T00:00:00Z", to:"{y}-12-31T23:59:59Z"){{
+    totalCommitContributions restrictedContributionsCount }} }} }}""" % LOGIN
 
 ROOT = Path(__file__).resolve().parent.parent
+# Smaller languages worth naming on the card even when they are a sliver by bytes.
+ALSO = {"Swift": "Swift", "Dart": "Dart (Flutter)", "Kotlin": "Kotlin", "C": "C", "C++": "C++",
+        "PLpgSQL": "SQL", "Shell": "Shell", "Jupyter Notebook": "Jupyter", "Move": "Move", "Rust": "Rust"}
+# Build output and vendored code that GitHub counts as a language but nobody wrote here.
+NOISE = {"Cython", "Mako", "Makefile", "CMake", "Dockerfile", "Procfile", "Batchfile", "Go Template", "Brainfuck"}
 TEXT, MUTED, ACCENT, BORDER, BG = "#1f2328", "#59636e", "#3987e5", "#d1d9e0", "#ffffff"
+
+
+def gql(query, paginate=False):
+    cmd = ["gh", "api", "graphql"] + (["--paginate"] if paginate else []) + ["-f", f"query={query}"]
+    out = subprocess.run(cmd, check=True, capture_output=True, text=True).stdout
+    return [json.loads(x) for x in out.replace("}{", "}\n{").splitlines() if x.strip()]
 
 
 def load(path):
     if path:
-        return json.loads(Path(path).read_text())["data"]["user"]
-    out = subprocess.run(["gh", "api", "graphql", "-f", f"query={QUERY}"], check=True, capture_output=True, text=True)
-    return json.loads(out.stdout)["data"]["user"]
+        return json.loads(Path(path).read_text())
+    u = gql(QUERY_USER)[0]["data"]["user"]
+    owned = [n for p in gql(QUERY_OWNED, True) for n in p["data"]["user"]["repositories"]["nodes"]]
+    contrib = [n for p in gql(QUERY_CONTRIB, True) for n in p["data"]["user"]["repositoriesContributedTo"]["nodes"]]
+    first_year = int(u["createdAt"][:4])
+    years = {}
+    for y in range(first_year, date.today().year + 1):
+        c = gql(QUERY_YEAR.format(y=y))[0]["data"]["user"]["contributionsCollection"]
+        years[y] = c["totalCommitContributions"] + c["restrictedContributionsCount"]
+    data = {"user": u, "owned": owned, "contributed": contrib, "commits_by_year": years,
+            "repo_count": gql(QUERY_OWNED)[0]["data"]["user"]["repositories"]["totalCount"]}
+    (ROOT / "stats.json").write_text(json.dumps(data))
+    return data
 
 
 def card(width, height, title, body):
@@ -47,15 +72,17 @@ def card(width, height, title, body):
 """
 
 
-def stats_card(u):
-    r, c = u["repositories"], u["contributionsCollection"]
-    stars = sum(n["stargazerCount"] for n in r["nodes"])
-    commits = c["totalCommitContributions"] + c["restrictedContributionsCount"]
+def stats_card(d):
+    u, c = d["user"], d["user"]["contributionsCollection"]
+    stars = sum(n["stargazerCount"] for n in d["owned"])
+    last_year = c["totalCommitContributions"] + c["restrictedContributionsCount"]
+    first_year = min(int(y) for y, n in d["commits_by_year"].items() if n)
     rows = [
-        ("Repositories", r["totalCount"]),
-        ("Commits in the last year", commits),
+        (f"Commits since {first_year}", sum(d["commits_by_year"].values())),
+        ("Commits in the last year", last_year),
         ("Pull requests in the last year", c["totalPullRequestContributions"]),
-        ("Repositories contributed to", c["totalRepositoriesWithContributedCommits"]),
+        ("Repositories owned", d["repo_count"]),
+        ("Other repositories contributed to", len(d["contributed"])),
         ("Stars earned", stars),
         ("Followers", u["followers"]["totalCount"]),
     ]
@@ -67,17 +94,19 @@ def stats_card(u):
     return card(420, 72 + len(rows) * 28 + 20, "GitHub activity", "\n".join(body))
 
 
-def langs_card(u):
+def langs_card(d):
     totals, colors = {}, {}
-    for n in u["repositories"]["nodes"]:
+    for n in d["owned"] + d["contributed"]:
         if n["isFork"]:
             continue
         for e in n["languages"]["edges"]:
             name = e["node"]["name"]
+            if name in NOISE:
+                continue
             totals[name] = totals.get(name, 0) + e["size"]
             colors[name] = e["node"]["color"] or MUTED
     total = sum(totals.values()) or 1
-    top = sorted(totals.items(), key=lambda kv: -kv[1])[:6]
+    top = sorted(totals.items(), key=lambda kv: -kv[1])[:6]  # the bar and the grid
     body, x = [], 24
     for name, size in top:  # one stacked bar
         w = max(2, round(372 * size / total))
@@ -91,12 +120,17 @@ def langs_card(u):
                     f'<text x="{x + 18}" y="{y}" class="l">{name}</text>'
                     f'<text x="{x + 170}" y="{y}" class="v" text-anchor="end">{100 * size / total:.1f}%</text>')
     rows = (len(top) + 1) // 2
-    body.append(f'<text x="24" y="{96 + rows * 26 + 2}" class="m">By bytes of code across all non-fork repositories, public and private.</text>')
-    return card(420, 96 + rows * 26 + 20, "Languages", "\n".join(body))
+    y = 96 + rows * 26 + 2
+    also = [label for name, label in ALSO.items() if name in totals and name not in dict(top)]
+    body.append(f'<text x="24" y="{y}" class="m">Also in the codebases</text>')
+    body.append(f'<text x="24" y="{y + 20}" class="v">{", ".join(also[:5])}</text>')
+    body.append(f'<text x="24" y="{y + 40}" class="v">{", ".join(also[5:])}</text>')
+    body.append(f'<text x="24" y="{y + 64}" class="m">By bytes of code across every repository I own or commit to, public and private.</text>')
+    return card(420, y + 82, "Languages", "\n".join(body))
 
 
 if __name__ == "__main__":
-    user = load(sys.argv[1] if len(sys.argv) > 1 else None)
-    (ROOT / "assets" / "stats.svg").write_text(stats_card(user))
-    (ROOT / "assets" / "langs.svg").write_text(langs_card(user))
+    data = load(sys.argv[1] if len(sys.argv) > 1 else None)
+    (ROOT / "assets" / "stats.svg").write_text(stats_card(data))
+    (ROOT / "assets" / "langs.svg").write_text(langs_card(data))
     print("wrote assets/stats.svg and assets/langs.svg")
