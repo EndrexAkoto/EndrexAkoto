@@ -20,7 +20,7 @@ and stores that sit in front of them.
 | 🇺🇸 | **US events industry**: Assistie, Intensity AI and The Hook Club, web and iOS |
 | 📱 | The Akoto staff portal shipped to **Google Play** as a progressive web app |
 | 🤖 | **Claude-powered assistants** inside the products, with the key kept server-side |
-| 💳 | **M-Pesa, Paystack and multi-currency** payments handled end to end, with signed e-contracts and audit trails |
+| 💳 | **Payments end to end**: M-Pesa, IntaSend, Paystack, Stripe and PayPal, multi-currency, with signed e-contracts and audit trails |
 | 📡 | **IoT** for fish farms, greenhouses and BnB door access |
 
 ## 🛠️ Stack
@@ -41,7 +41,10 @@ and stores that sit in front of them.
 ![Arduino](https://img.shields.io/badge/Arduino-00979D?style=flat-square&logo=arduino&logoColor=white)
 ![Raspberry Pi](https://img.shields.io/badge/Raspberry_Pi-A22846?style=flat-square&logo=raspberrypi&logoColor=white)
 ![M-Pesa](https://img.shields.io/badge/M--Pesa-Daraja_API-4CAF50?style=flat-square)
+![IntaSend](https://img.shields.io/badge/IntaSend-1F2937?style=flat-square)
 ![Paystack](https://img.shields.io/badge/Paystack-00C3F7?style=flat-square&logo=paystack&logoColor=white)
+![Stripe](https://img.shields.io/badge/Stripe-635BFF?style=flat-square&logo=stripe&logoColor=white)
+![PayPal](https://img.shields.io/badge/PayPal-003087?style=flat-square&logo=paypal&logoColor=white)
 
 - **Backend**: Python with Flask and Django, SQLAlchemy, MariaDB and Postgres,
   REST APIs, cron-driven background jobs.
@@ -52,8 +55,9 @@ and stores that sit in front of them.
   provider key kept server-side and the model chosen by capability tier.
 - **IoT**: sensors, controllers and gateways reporting into web dashboards
   with alerts.
-- **Payments and integrations**: M-Pesa (STK push, C2B callbacks), Paystack,
-  Meta Graph API, Web Push.
+- **Payments**: M-Pesa (STK push, C2B callbacks), IntaSend, Paystack, Stripe
+  and PayPal, in KES and USD, with idempotent callbacks and reconciliation.
+- **Integrations**: Meta Graph API, Linear, Web Push, email (SMTP, IMAP, SES).
 - **Operations**: cPanel and LiteSpeed hosting, Cloudflare Pages, Docker for
   local work, integration tests that mock below the network boundary.
 
