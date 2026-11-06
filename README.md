@@ -1,14 +1,14 @@
 # Hi, I'm Endrex Akoto 👋
 
 [![Akoto Group Limited](https://img.shields.io/badge/Founder-Akoto_Group_Limited-0b5fff?style=for-the-badge&logo=rocket&logoColor=white)](https://akotogrouplimited.com/)
-[![Nairobi](https://img.shields.io/badge/Nairobi-Kenya-d95926?style=for-the-badge&logo=googlemaps&logoColor=white)](https://akotogrouplimited.com/contact)
+[![Kenya and USA](https://img.shields.io/badge/Kenya-USA-d95926?style=for-the-badge&logo=googlemaps&logoColor=white)](https://akotogrouplimited.com/contact)
 [![Email](https://img.shields.io/badge/Email-hello%40akotogrouplimited.com-3987e5?style=for-the-badge&logo=gmail&logoColor=white)](mailto:hello@akotogrouplimited.com)
 
 Full-stack software engineer and founder of
 [Akoto Group Limited](https://akotogrouplimited.com/). I build software that
-small and mid-sized organisations in Kenya actually run on: school management,
-point of sale, payroll, ERP, IoT installations, AI assistants and the websites
-and stores that sit in front of them.
+organisations in Kenya and the United States actually run on: school
+management, point of sale, payroll, ERP, IoT installations, AI assistants,
+event-industry apps, and the websites and stores that sit in front of them.
 
 [![Live sites built by Akoto Group: AkotoPOS, Kite Institute, Mich Digi, Agriland Connect, KingBi Tech, Mkenya2RU, We Drop, Breathehaus](assets/banner.png)](https://akotogrouplimited.com/portfolio)
 
@@ -103,7 +103,7 @@ shilling, and outreach systems that respect sending limits.
 |---|---|
 | 🎓 [Kite Institute of Professional Studies](https://kiteinstituteofprofessionalstudies.com/) | Academic platform for a KASNEB, IT and business training institute, with online applications |
 | 🏫 [St. Monica's Girls' Senior School, Kitale](https://stmonicasgirlskitale.sc.ke/) | School website with admissions, a fee structure published by year, news and downloads, kept current by school staff through their own admin |
-| 🔎 [Nexa Research](https://nexagroupke.com/) | Site for a Nairobi research and public-data intelligence firm: services, research write-ups and insights, with enquiries landing in the firm's own inbox |
+| 🔎 [Nexa Research](https://nexagroupke.com/) | Site for a Kenyan research and public-data intelligence firm: services, research write-ups and insights, with enquiries landing in the firm's own inbox |
 | 💻 [Mich Digi Solutions](https://michdigisolutions.com/) | Online store for a computer and electronics retailer, with WhatsApp and call enquiry |
 | 📱 [KingBi Tech Solutions](https://www.kingbitechsolutions.com/) | Gadgets marketplace with smart pricing |
 | 🎨 [Mkenya2RU Creatives](https://mkenya2ru.com/) | Branding and merchandise storefront with WhatsApp ordering |
