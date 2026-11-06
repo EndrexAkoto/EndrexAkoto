@@ -161,5 +161,5 @@ Older projects, experiments and course work.
 - 🌐 [akotogrouplimited.com](https://akotogrouplimited.com/)
 - ✉️ hello@akotogrouplimited.com
 
-![GitHub stats](https://github-readme-stats.vercel.app/api?username=EndrexAkoto&show_icons=true&hide_border=true)
-![Top languages](https://github-readme-stats.vercel.app/api/top-langs/?username=EndrexAkoto&layout=compact&hide_border=true)
+[![GitHub followers](https://img.shields.io/github/followers/EndrexAkoto?style=for-the-badge&logo=github&label=Followers)](https://github.com/EndrexAkoto?tab=followers)
+[![GitHub stars](https://img.shields.io/github/stars/EndrexAkoto?style=for-the-badge&logo=github&label=Stars)](https://github.com/EndrexAkoto?tab=repositories)
