@@ -10,6 +10,8 @@ small and mid-sized organisations in Kenya actually run on: school management,
 point of sale, payroll, ERP, IoT installations, AI assistants and the websites
 and stores that sit in front of them.
 
+[![Live sites built by Akoto Group: AkotoPOS, Kite Institute, Mich Digi, Agriland Connect, KingBi Tech, Mkenya2RU, We Drop, Breathehaus](assets/banner.png)](https://akotogrouplimited.com/portfolio)
+
 ## 🏆 Highlights
 
 | | |
